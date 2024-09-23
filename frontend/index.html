@@ -10,19 +10,15 @@
     <div class="menuBlock">
         <div class="menuBlock__container">
 
-            <div class="menuBlock__name">
-                <h2 class="name__title">Your Name:</h2>
-                <input class="name__input" type="text">
-            </div>
+            <form class="menuBlock__form">
+                <label for="menuBlock__name" class="menuBlock__nameLabel">Your Name:</label>
+                <input type="text" id="menuBlock__name" class="menuBlock__name">
+                <label for="menuBlock__password" class="menuBlock__passLabel">Your Password:</label>
+                <input type="password" id="menuBlock__password" class="menuBlock__password">
 
-            <div class="menuBlock__password">
-                <h2 class="password__title">Your Password:</h2>
-                <input class="password__input" type="password">
-            </div>
-
-            <div class="menuBlock__submit">
-                <button type="submit" class="menuBlock__submitBtn">Submit</button>
-            </div>
+                <input type="submit" id="menuBlock__submit" class="menuBlock__submit" value="Submit">
+                <button class="menuBlock__noAccount">I don't have an account</button>
+            </form>
 
         </div>
     </div>
