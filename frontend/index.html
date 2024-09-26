@@ -10,14 +10,29 @@
     <div class="menuBlock">
         <div class="menuBlock__container">
 
-            <form class="menuBlock__form">
-                <label for="menuBlock__name" class="menuBlock__nameLabel">Your Name:</label>
-                <input type="text" id="menuBlock__name" class="menuBlock__name" placeholder="Name" required autofocus size="1">
-                <label for="menuBlock__password" class="menuBlock__passLabel">Your Password:</label>
-                <input type="password" id="menuBlock__password" class="menuBlock__password" placeholder="Password" required>
+            <form class="menuBlock__form menuBlock__form 1" style="display: none;">
+                <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel1">Your Name:</label>
+                <input type="text" id="menuBlock__name" class="menuBlock__name name1" placeholder="Name" required autofocus>
 
-                <input type="submit" id="menuBlock__submit" class="menuBlock__submit" value="Submit">
-                <button class="menuBlock__noAccount">I don't have an account</button>
+                <label for="menuBlock__password" class="menuBlock__passLabel passLabel1">Your Password:</label>
+                <input type="password" id="menuBlock__password" class="menuBlock__password pass1" placeholder="Password" required>
+
+                <input type="submit" id="menuBlock__submit" class="menuBlock__submit submit1" value="Submit">
+                <button class="menuBlock__noAccount bottomBtn">I don't have an account</button>
+            </form>
+
+            <form class="menuBlock__form menuBlock__form2">
+                <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
+                <input type="text" id="menuBlock__name" class="menuBlock__name name2" placeholder="Name" required autofocus>
+
+                <label for="menuBlock__password" class="menuBlock__passLabel passLabel2">Your Password:</label>
+                <input type="password" id="menuBlock__password" class="menuBlock__password pass2" placeholder="Password" required>
+
+                <label for="menuBlock__password" class="menuBlock__passLabel confPassLabel">Confirm Your Password:</label>
+                <input type="password" id="menuBlock__password" class="menuBlock__password confPass2" placeholder="Password" required>
+
+                <input type="submit" id="menuBlock__submit" class="menuBlock__submit submit2" value="Submit">
+                <button class="menuBlock__goback bottomBtn">Go back</button>
             </form>
 
         </div>

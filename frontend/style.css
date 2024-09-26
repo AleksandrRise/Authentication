@@ -48,7 +48,7 @@ body {
     margin-top: 15px;
 }
 
-.menuBlock__noAccount {
+.bottomBtn {
     border: none;
     background-color: transparent;
     font-size: 12px;
@@ -57,7 +57,7 @@ body {
     margin: 0 auto;
 }
 
-.menuBlock__noAccount:hover {
+.bottomBtn:hover {
     color: #0c75e6;
     cursor: pointer;
 }
