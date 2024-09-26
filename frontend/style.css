@@ -83,3 +83,23 @@ body {
     color: rgb(0, 0, 0, 1);
 }
 
+
+/* Adaptation */
+
+@media screen and (max-width: 800px) {
+    .menuBlock {
+        border: none;
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .menuBlock {
+        transform: scale(1.2);
+    }
+}
+
