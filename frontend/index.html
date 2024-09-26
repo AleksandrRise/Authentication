@@ -10,7 +10,7 @@
     <div class="menuBlock">
         <div class="menuBlock__container">
 
-            <form class="menuBlock__form menuBlock__form 1" style="display: none;">
+            <form class="menuBlock__form menuBlock__form1">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel1">Your Name:</label>
                 <input type="text" id="menuBlock__name" class="menuBlock__name name1" placeholder="Name" required autofocus>
 
@@ -21,7 +21,7 @@
                 <button class="menuBlock__noAccount bottomBtn">I don't have an account</button>
             </form>
 
-            <form class="menuBlock__form menuBlock__form2">
+            <form class="menuBlock__form menuBlock__form2" style="display: none;">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
                 <input type="text" id="menuBlock__name" class="menuBlock__name name2" placeholder="Name" required autofocus>
 
@@ -37,5 +37,22 @@
 
         </div>
     </div>
+
+    <script>
+        let noAccBtn = document.querySelector(".menuBlock__noAccount");
+        let gobackBtn = document.querySelector(".menuBlock__goback");
+        let form1 = document.querySelector(".menuBlock__form1");
+        let form2 = document.querySelector(".menuBlock__form2")
+
+        noAccBtn.addEventListener("click", (e) => {
+            form1.style.display = "none";
+            form2.style.display = "flex"
+        });
+
+        gobackBtn.addEventListener("click", (e) => {
+            form2.style.display = "none";
+            form1.style.display = "flex"
+        });
+    </script>
 </body>
 </html>
