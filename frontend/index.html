@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RegMenu-Test</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.js">
 </head>
 <body>
     <div class="menuBlock">
@@ -12,24 +13,24 @@
 
             <form class="menuBlock__form menuBlock__form1">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel1">Your Name:</label>
-                <input type="text" id="menuBlock__name" class="menuBlock__name name1" placeholder="Name" required autofocus>
+                <input type="text" id="menuBlock__name1" class="menuBlock__name name1" placeholder="Name" required autofocus>
 
                 <label for="menuBlock__password" class="menuBlock__passLabel passLabel1">Your Password:</label>
-                <input type="password" id="menuBlock__password" class="menuBlock__password pass1" placeholder="Password" required>
+                <input type="password" id="menuBlock__password1" class="menuBlock__password pass1" placeholder="Password" required>
 
-                <input type="submit" id="menuBlock__submit" class="menuBlock__submit submit1" value="Submit">
+                <input type="submit" id="menuBlock__submi1" class="menuBlock__submit submit1" value="Submit">
                 <button class="menuBlock__noAccount bottomBtn">I don't have an account</button>
             </form>
 
             <form class="menuBlock__form menuBlock__form2" style="display: none;">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
-                <input type="text" id="menuBlock__name" class="menuBlock__name name2" placeholder="Name" required autofocus>
+                <input type="text" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name" required>
 
                 <label for="menuBlock__password" class="menuBlock__passLabel passLabel2">Your Password:</label>
-                <input type="password" id="menuBlock__password" class="menuBlock__password pass2" placeholder="Password" required>
+                <input type="password" id="menuBlock__password2" class="menuBlock__password pass2" placeholder="Password" required>
 
                 <label for="menuBlock__password" class="menuBlock__passLabel confPassLabel">Confirm Your Password:</label>
-                <input type="password" id="menuBlock__password" class="menuBlock__password confPass2" placeholder="Password" required>
+                <input type="password" id="menuBlock__password2" class="menuBlock__password confPass2" placeholder="Password" required>
 
                 <input type="submit" id="menuBlock__submit" class="menuBlock__submit submit2" value="Submit">
                 <button class="menuBlock__goback bottomBtn">Go back</button>
@@ -42,17 +43,27 @@
         let noAccBtn = document.querySelector(".menuBlock__noAccount");
         let gobackBtn = document.querySelector(".menuBlock__goback");
         let form1 = document.querySelector(".menuBlock__form1");
-        let form2 = document.querySelector(".menuBlock__form2")
+        let form2 = document.querySelector(".menuBlock__form2");
+        let password = document.querySelector(".passLabel2");
+        let confPassword = document.querySelector(".confPass2");
 
         noAccBtn.addEventListener("click", (e) => {
             form1.style.display = "none";
-            form2.style.display = "flex"
+            form2.style.display = "flex";
+            document.querySelector(".name2").focus();
         });
 
         gobackBtn.addEventListener("click", (e) => {
             form2.style.display = "none";
-            form1.style.display = "flex"
+            form1.style.display = "flex";
+            document.querySelector(".name1").focus();
         });
+
+        function submitReg() {
+            if (password != confPassword) {
+                alert("You typed two different passwords.");
+            }
+        }
     </script>
 </body>
 </html>
