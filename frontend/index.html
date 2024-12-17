@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RegMenu-Test</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="signup.js">
 </head>
 <body>
     <div class="menuBlock">
         <div class="menuBlock__container">
 
-            <form class="menuBlock__form menuBlock__form1">
+            <form action="/login" method="get" class="menuBlock__form menuBlock__form1">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel1">Your Name:</label>
                 <input type="text" id="menuBlock__name1" class="menuBlock__name name1" placeholder="Name" required autofocus>
 
@@ -22,9 +21,9 @@
                 <button class="menuBlock__noAccount bottomBtn">I don't have an account</button>
             </form>
 
-            <form class="menuBlock__form menuBlock__form2" style="display: none;">
+            <form action="/register" method="post" class="menuBlock__form menuBlock__form2" style="display: none;">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
-                <input type="text" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name" required>
+                <input type="text" name="name2" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name" required>
 
                 <label for="menuBlock__password" class="menuBlock__passLabel passLabel2">Your Password:</label>
                 <input type="password" id="menuBlock__password2" class="menuBlock__password pass2" placeholder="Password" required>
