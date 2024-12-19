@@ -10,7 +10,7 @@
     <div class="menuBlock">
         <div class="menuBlock__container">
 
-            <form action="/login" method="get" class="menuBlock__form menuBlock__form1">
+            <form id="form1" method="get" class="menuBlock__form menuBlock__form1">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel1">Your Name:</label>
                 <input type="text" id="menuBlock__name1" class="menuBlock__name name1" placeholder="Name" required autofocus>
 
@@ -21,7 +21,7 @@
                 <button class="menuBlock__noAccount bottomBtn">I don't have an account</button>
             </form>
 
-            <form action="/register" method="post" class="menuBlock__form menuBlock__form2" style="display: none;">
+            <form id="form2" method="post" class="menuBlock__form menuBlock__form2" style="display: none;">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
                 <input type="text" name="name2" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name" required>
 
@@ -33,6 +33,8 @@
 
                 <input type="submit" id="menuBlock__submit2" class="menuBlock__submit submit2" value="Submit">
                 <button class="menuBlock__goback bottomBtn">Go back</button>
+
+                <script src="posting.js"></script>
             </form>
 
         </div>
