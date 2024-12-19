@@ -1,10 +1,9 @@
 package com.regmenu.backend.controller;
 
-import com.regmenu.backend.model.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class IndexController {
@@ -15,9 +14,13 @@ public class IndexController {
     }
 
     @PostMapping("/register")
-    public String userRegistration(@ModelAttribute User user) {
-        System.out.println("Done!!!!");
-        return "Hello " + user;
+    public String userRegistration(
+            @RequestParam("name2") String username,
+            @RequestParam("pass2") String password,
+            @RequestParam("confPass2") String confPass
+            ) {
+        System.out.println(username + password + confPass);
+        return "index";
     }
 
 }

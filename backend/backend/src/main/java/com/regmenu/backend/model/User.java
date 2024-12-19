@@ -1,19 +1,27 @@
 package com.regmenu.backend.model;
 
 public class User {
-    private String username;
-    private String password;
+    private String name2;
+    private String pass2;
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
+//    public User(String username, String password) {
+//        this.name2 = username;
+//        this.pass2 = password;
+//    }
 
     public String getUsername() {
-        return username;
+        return name2;
     }
 
     public String getPassword() {
-        return password;
+        return pass2;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + name2 + '\'' +
+                ", password='" + pass2 + '\'' +
+                '}';
     }
 }
