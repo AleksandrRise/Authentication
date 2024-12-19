@@ -21,7 +21,7 @@
                 <button class="menuBlock__noAccount bottomBtn">I don't have an account</button>
             </form>
 
-            <form id="form2" action="register" method="post" class="menuBlock__form menuBlock__form2" style="display: none;">
+            <form id="form2" action="register" method="post" class="menuBlock__form menuBlock__form2" onsubmit="return validateForm();" style="display: none;">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
                 <input type="text" name="name2" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name" required>
 
@@ -43,8 +43,6 @@
         let gobackBtn = document.querySelector(".menuBlock__goback");
         let form1 = document.querySelector(".menuBlock__form1");
         let form2 = document.querySelector(".menuBlock__form2");
-        let password = document.querySelector(".passLabel2");
-        let confPassword = document.querySelector(".confPass2");
 
         noAccBtn.addEventListener("click", (e) => {
             form1.style.display = "none";
@@ -58,10 +56,15 @@
             document.querySelector(".name1").focus();
         });
 
-        function submitReg() {
-            if (password != confPassword) {
+        function validateForm() {
+            let password = document.querySelector(".pass2").value;
+            let confPassword = document.querySelector(".confPass2").value;
+
+            if (password !== confPassword) {
                 alert("You typed two different passwords.");
+                return false;
             }
+            return true;
         }
     </script>
 </body>

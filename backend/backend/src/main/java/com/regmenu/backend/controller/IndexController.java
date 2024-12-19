@@ -16,10 +16,9 @@ public class IndexController {
     @PostMapping("/register")
     public String userRegistration(
             @RequestParam("name2") String username,
-            @RequestParam("pass2") String password,
-            @RequestParam("confPass2") String confPass
+            @RequestParam("pass2") String password
             ) {
-        System.out.println(username + password + confPass);
+        System.out.println(username + password);
         return "index";
     }
 
