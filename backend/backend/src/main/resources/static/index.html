@@ -44,13 +44,13 @@
         let form1 = document.querySelector(".menuBlock__form1");
         let form2 = document.querySelector(".menuBlock__form2");
 
-        noAccBtn.addEventListener("click", (e) => {
+        noAccBtn.addEventListener("click", () => {
             form1.style.display = "none";
             form2.style.display = "flex";
             document.querySelector(".name2").focus();
         });
 
-        gobackBtn.addEventListener("click", (e) => {
+        gobackBtn.addEventListener("click", () => {
             form2.style.display = "none";
             form1.style.display = "flex";
             document.querySelector(".name1").focus();
