@@ -23,8 +23,9 @@ public class UserController {
     }
 
 
-    @PostMapping("/")
+    @PostMapping("/register")
     public ResponseEntity<Object> createUser(@RequestBody UserEntity user) {
+        System.out.println("got it!!");
         return userService.newUser(user);
     }
 
@@ -39,7 +40,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Object> getUser(@PathVariable Long id) {
-        return this.userService.getUser(id);
+    public ResponseEntity<Object> getUserById(@PathVariable Long id) {
+        return this.userService.getUserById(id);
     }
 }

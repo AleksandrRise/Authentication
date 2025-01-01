@@ -56,7 +56,7 @@ public class UserService {
         return ResponseEntity.ok().build();
     }
 
-    public ResponseEntity<Object> getUser(Long id) {
+    public ResponseEntity<Object> getUserById(Long id) {
         Optional<UserEntity> userOptional = userRepository.findById(id);
 
         if (!userOptional.isPresent()) {
@@ -67,5 +67,7 @@ public class UserService {
 
         return ResponseEntity.ok(user);
     }
+
+
 
 }
