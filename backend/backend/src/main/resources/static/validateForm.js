@@ -13,21 +13,11 @@ function validateForm() {
 
 function doPost(username, password) {
     let data = `{ "username":"${username}" , "password":"${password}" }`;
-    const json = JSON.parse(data);
 
-    console.log(json);
+    let xmlhttp = new XMLHttpRequest();
+    let theUrl = "/users/register";
 
-    fetch("/register", {
-        method: "post",
-        body: json
-    })
-        .then((res) => {
-            return res.text();
-        })
-        .then((txt) => {
-            console.log("Submit Success!");
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    xmlhttp.open("POST", theUrl);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(JSON.stringify(data));
 }
