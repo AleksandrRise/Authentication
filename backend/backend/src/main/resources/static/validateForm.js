@@ -12,12 +12,15 @@ function validateForm() {
 
 
 function doPost(username, password) {
-    let data = `{ "username":"${username}" , "password":"${password}" }`;
+    let data = {
+        username: username,
+        password: password
+    }
 
     let xmlhttp = new XMLHttpRequest();
     let theUrl = "/users/register";
 
     xmlhttp.open("POST", theUrl);
-    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.setRequestHeader("Content-Type", "application/json");
     xmlhttp.send(JSON.stringify(data));
 }
