@@ -9,7 +9,16 @@
 </head>
 <body>
 
+    <div class="responseMessages" id="successMessage">
+        <p class="successMessage__text">User has been created!</p>
+    </div>
+    <div class="responseMessages" id="failMessage">
+        <p class="failMessage__text">Such a user already exists!</p>
+    </div>
+
+
     <div class="menuBlock">
+
         <div class="menuBlock__container">
 
             <form id="form1" method="get" class="menuBlock__form menuBlock__form1">
@@ -60,5 +69,7 @@
     </script>
 
     <script src="validateForm.js"></script>
+    <script src="responseMessages.js"></script>
+
 </body>
 </html>

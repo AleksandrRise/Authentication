@@ -33,11 +33,13 @@ function doPost(username, password) {
         // If success, reload the page and show a success message
         if (xhr.status === 201) {
 
-            window.location.reload();
-            
+            successMessage();
+            reload();
 
         } else if (xhr.status === 400) {
-            console.error("Bad request!")
+
+            failMessage();
+
         } else {
             console.error("Request failed. Returned status of " + xhr.status);
         }

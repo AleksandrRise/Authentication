@@ -84,6 +84,35 @@ body {
 }
 
 
+.responseMessages {
+    position: fixed;
+    padding: 25px 50px;
+
+    text-shadow: 1px 1px 2px #000;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 75%);
+
+    transition: top 0.5s ease-in-out 0s;
+}
+
+#successMessage {
+    background: linear-gradient(20deg, #4BB543, #2CFF05);
+    color: #ffffff;
+
+    top: -100px;
+    left: 50%;
+    translate: -50% 0;
+}
+
+#failMessage {
+
+}
+
+
 /* Adaptation */
 
 @media screen and (max-width: 800px) {
