@@ -20,8 +20,12 @@ public class UserService {
 
     // Create a new user
     public ResponseEntity<Object> newUser(UserEntity user) {
-        userRepository.save(user);
-        return new ResponseEntity<>(user, HttpStatus.CREATED);
+        if (!userRepository.existsByUsername(user.getUsername())) {
+            userRepository.save(user);
+            return new ResponseEntity<>(user, HttpStatus.CREATED);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     // Get the whole list of users

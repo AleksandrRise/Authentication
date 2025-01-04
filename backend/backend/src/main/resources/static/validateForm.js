@@ -1,3 +1,5 @@
+let xhr = new XMLHttpRequest();
+
 function validateForm() {
     let username = document.querySelector(".name2").value;
     let password = document.querySelector(".pass2").value;
@@ -16,11 +18,22 @@ function doPost(username, password) {
         username: username,
         password: password
     }
-
-    let xmlhttp = new XMLHttpRequest();
     let theUrl = "/users/register";
 
-    xmlhttp.open("POST", theUrl);
-    xmlhttp.setRequestHeader("Content-Type", "application/json");
-    xmlhttp.send(JSON.stringify(data));
+
+    xhr.open("POST", theUrl);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    // Handle the response
+    xhr.onload = () => {
+        if (xhr.status === 201) {
+            console.log("Success!!!");
+        } else if (xhr.status === 400) {
+            console.error("Bad request!")
+        } else {
+            console.error("Request failed. Returned status of " + xhr.status);
+        }
+    };
+
+    xhr.send(JSON.stringify(data));
 }

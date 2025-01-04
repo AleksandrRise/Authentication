@@ -22,10 +22,8 @@ public class UserController {
         return this.userService.getUsers();
     }
 
-
     @PostMapping("/register")
     public ResponseEntity<Object> createUser(@RequestBody UserEntity user) {
-        System.out.println("got it!!");
         return userService.newUser(user);
     }
 
