@@ -1,6 +1,7 @@
 let xhr = new XMLHttpRequest();
 
 function validateForm() {
+
     let username = document.querySelector(".name2").value;
     let password = document.querySelector(".pass2").value;
     let confPassword = document.querySelector(".confPass2").value;
@@ -10,10 +11,12 @@ function validateForm() {
     } else {
         alert("You typed two different passwords.");
     }
+
 }
 
 
 function doPost(username, password) {
+
     let data = {
         username: username,
         password: password
@@ -26,14 +29,21 @@ function doPost(username, password) {
 
     // Handle the response
     xhr.onload = () => {
+
+        // If success, reload the page and show a success message
         if (xhr.status === 201) {
-            console.log("Success!!!");
+
+            window.location.reload();
+            
+
         } else if (xhr.status === 400) {
             console.error("Bad request!")
         } else {
             console.error("Request failed. Returned status of " + xhr.status);
         }
+
     };
 
     xhr.send(JSON.stringify(data));
+
 }
