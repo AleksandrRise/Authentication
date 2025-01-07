@@ -109,7 +109,7 @@ body {
 }
 
 #failMessage {
-    background: linear-gradient(20deg, #cc0000, #910404);
+    background: linear-gradient(20deg, #cc0000, #b20606);
     color: #ffffff;
 
     top: -100px;
@@ -134,6 +134,16 @@ body {
 @media screen and (min-width: 1440px) {
     .menuBlock {
         transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .responseMessages__text {
+        font-size: 16px;
+    }
+
+    .responseMessages {
+        padding: 20px 40px;
     }
 }
 
