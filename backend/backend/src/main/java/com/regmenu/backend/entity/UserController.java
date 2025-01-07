@@ -37,8 +37,13 @@ public class UserController {
         return this.userService.deleteUser(id);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/byid/{id}")
     public ResponseEntity<Object> getUserById(@PathVariable Long id) {
         return this.userService.getUserById(id);
+    }
+
+    @GetMapping("/byname/{username}")
+    public ResponseEntity<Object> getUserByName(@PathVariable String username) {
+        return this.userService.getUserByName(username);
     }
 }

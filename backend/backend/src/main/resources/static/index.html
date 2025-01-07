@@ -55,6 +55,7 @@
         let form1 = document.querySelector(".menuBlock__form1");
         let form2 = document.querySelector(".menuBlock__form2");
 
+        // Switch to registration block
         noAccBtn.addEventListener("click", (e) => {
             e.preventDefault();
             form1.style.display = "none";
@@ -62,6 +63,7 @@
             document.querySelector(".name2").focus();
         });
 
+        // Switch to log in block
         gobackBtn.addEventListener("click", (e) => {
             e.preventDefault();
             form2.style.display = "none";

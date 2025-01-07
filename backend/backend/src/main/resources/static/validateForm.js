@@ -47,5 +47,8 @@ function doPost(username, password) {
     };
 
     xhr.send(JSON.stringify(data));
+}
+
+function doGet() {
 
 }
