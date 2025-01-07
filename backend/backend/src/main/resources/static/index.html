@@ -55,13 +55,15 @@
         let form1 = document.querySelector(".menuBlock__form1");
         let form2 = document.querySelector(".menuBlock__form2");
 
-        noAccBtn.addEventListener("click", () => {
+        noAccBtn.addEventListener("click", (e) => {
+            e.preventDefault();
             form1.style.display = "none";
             form2.style.display = "flex";
             document.querySelector(".name2").focus();
         });
 
-        gobackBtn.addEventListener("click", () => {
+        gobackBtn.addEventListener("click", (e) => {
+            e.preventDefault();
             form2.style.display = "none";
             form1.style.display = "flex";
             document.querySelector(".name1").focus();

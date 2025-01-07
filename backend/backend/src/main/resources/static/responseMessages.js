@@ -8,13 +8,10 @@ function failMessage() {
     showMessage(message);
 }
 
-// Reload page besides messages
+// Reload page without touching status messages
 function reload() {
     let container = document.querySelector(".menuBlock");
     let content = container.innerHTML;
-
-    let form1 = document.querySelector(".menuBlock__form1");
-    let form2 = document.querySelector(".menuBlock__form2");
 
     container.innerHTML = content;
 }
