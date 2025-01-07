@@ -109,7 +109,12 @@ body {
 }
 
 #failMessage {
+    background: linear-gradient(20deg, #cc0000, #910404);
+    color: #ffffff;
 
+    top: -100px;
+    left: 50%;
+    translate: -50% 0;
 }
 
 
