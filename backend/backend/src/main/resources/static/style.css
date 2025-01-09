@@ -108,7 +108,7 @@ body {
     translate: -50% 0;
 }
 
-#failMessage {
+#failMessage, #matchingFailMessage, #userNotFoundMessage {
     background: linear-gradient(20deg, #cc0000, #b20606);
     color: #ffffff;
 

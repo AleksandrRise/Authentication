@@ -9,11 +9,19 @@
 </head>
 <body>
 
+    <!-- Messages for a registration page -->
     <div class="responseMessages" id="successMessage">
         <p class="responseMessages__text">User has been created!</p>
     </div>
     <div class="responseMessages" id="failMessage">
         <p class="responseMessages__text">Such a user already exists!</p>
+    </div>
+    <!-- Messages for a login page -->
+    <div class="responseMessages" id="matchingFailMessage">
+        <p class="responseMessages__text">The password is wrong! Try again.</p>
+    </div>
+    <div class="responseMessages" id="userNotFoundMessage">
+        <p class="responseMessages__text">Such a user is not found!</p>
     </div>
 
 
@@ -23,24 +31,24 @@
 
             <form id="form1" method="get" class="menuBlock__form menuBlock__form1">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel1">Your Name:</label>
-                <input type="text" name="name1" id="menuBlock__name1" class="menuBlock__name name1" placeholder="Name" required autofocus>
+                <input type="text" name="name1" id="menuBlock__name1" class="menuBlock__name name1" placeholder="Name" autofocus>
 
                 <label for="menuBlock__password" class="menuBlock__passLabel passLabel1">Your Password:</label>
-                <input type="password" name="pass1" id="menuBlock__password1" class="menuBlock__password pass1" placeholder="Password" required>
+                <input type="password" name="pass1" id="menuBlock__password1" class="menuBlock__password pass1" placeholder="Password">
 
-                <input type="submit" id="menuBlock__submit1" class="menuBlock__submit submit1" value="Submit">
+                <input type="button" id="menuBlock__submit1" class="menuBlock__submit submit1" value="Submit" onclick="doGet()">
                 <button class="menuBlock__noAccount bottomBtn">I don't have an account</button>
             </form>
 
             <form id="form2" class="menuBlock__form menuBlock__form2" style="display: none;">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
-                <input type="text" name="name2" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name" required>
+                <input type="text" name="name2" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name">
 
                 <label for="menuBlock__password" class="menuBlock__passLabel passLabel2">Your Password:</label>
-                <input type="password" name="pass2" id="menuBlock__confPass1" class="menuBlock__password pass2" placeholder="Password" required>
+                <input type="password" name="pass2" id="menuBlock__confPass1" class="menuBlock__password pass2" placeholder="Password">
 
                 <label for="menuBlock__password" class="menuBlock__passLabel confPassLabel">Confirm Your Password:</label>
-                <input type="password" name="confPass2" id="menuBlock__confPass2" class="menuBlock__password confPass2" placeholder="Password" required>
+                <input type="password" name="confPass2" id="menuBlock__confPass2" class="menuBlock__password confPass2" placeholder="Password">
 
                 <input type="button" id="menuBlock__submit2" class="menuBlock__submit submit2" value="Submit" onclick="validateForm()">
                 <button class="menuBlock__goback bottomBtn">Go back</button>

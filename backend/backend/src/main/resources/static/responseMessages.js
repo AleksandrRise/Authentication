@@ -1,3 +1,4 @@
+// Messages for registration page
 function successMessage() {
     let message = document.getElementById("successMessage");
     showMessage(message);
@@ -7,6 +8,18 @@ function failMessage() {
     let message = document.getElementById("failMessage");
     showMessage(message);
 }
+
+// Messages for log in page
+function matchingFailMessage() {
+    let message = document.getElementById("matchingFailMessage");
+    showMessage(message);
+}
+
+function userNotFoundMessage() {
+    let message = document.getElementById("userNotFoundMessage");
+    showMessage(message);
+}
+
 
 // Reload page without touching status messages
 function reload() {
