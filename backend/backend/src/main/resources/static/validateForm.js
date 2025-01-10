@@ -23,16 +23,11 @@ function validateForm() {
     if (confPassword === "") {
         confPassError.style.display = "inline";
     } else {
-        confPassError.style.display = "inline";
+        confPassError.style.display = "none";
     }
 
     if (!(username === "") && !(password === "") && !(confPassword === "")) {
         if (password === confPassword) {
-
-            usernameError.style.display = "none";
-            passwordError.style.display = "none";
-            confPassError.style.display = "none";
-
             doPost(username, password);
         } else {
             matchingFailMessage();
