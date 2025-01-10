@@ -12,7 +12,7 @@
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend</name>
-	<description>Backend page for RegMenu project that connects database.</description>
+	<description>Backend page for RegMenu project that connects database and frontend.</description>
 	<url/>
 	<licenses>
 		<license/>
