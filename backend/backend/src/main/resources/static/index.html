@@ -29,7 +29,7 @@
 
         <div class="menuBlock__container">
 
-            <form id="form1" method="get" class="menuBlock__form menuBlock__form1">
+            <form id="form1" class="menuBlock__form menuBlock__form1">
                 <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel1">Your Name:</label>
                 <input type="text" name="name1" id="menuBlock__name1" class="menuBlock__name name1" placeholder="Name" autofocus>
 
@@ -41,13 +41,13 @@
             </form>
 
             <form id="form2" class="menuBlock__form menuBlock__form2" style="display: none;">
-                <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2">Your Name:</label>
+                <label for="menuBlock__name" class="menuBlock__nameLabel nameLabel2 form2Labels">Your Name: <span style="display: none">Type Your Name!</span></label>
                 <input type="text" name="name2" id="menuBlock__name2" class="menuBlock__name name2" placeholder="Name">
 
-                <label for="menuBlock__password" class="menuBlock__passLabel passLabel2">Your Password:</label>
+                <label for="menuBlock__password" class="menuBlock__passLabel passLabel2 form2Labels">Your Password: <span style="display: none">Type Your Password!</span></label>
                 <input type="password" name="pass2" id="menuBlock__confPass1" class="menuBlock__password pass2" placeholder="Password">
 
-                <label for="menuBlock__password" class="menuBlock__passLabel confPassLabel">Confirm Your Password:</label>
+                <label for="menuBlock__password" class="menuBlock__passLabel confPassLabel form2Labels">Confirm Your Password: <span style="display: none">Type Your Password Again!</span></label>
                 <input type="password" name="confPass2" id="menuBlock__confPass2" class="menuBlock__password confPass2" placeholder="Password">
 
                 <input type="button" id="menuBlock__submit2" class="menuBlock__submit submit2" value="Submit" onclick="validateForm()">

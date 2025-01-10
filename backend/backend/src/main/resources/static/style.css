@@ -48,6 +48,17 @@ body {
     margin-top: 15px;
 }
 
+.form2Labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form2Labels span {
+    font-size: 12px;
+    color: #cc0000;
+}
+
 .bottomBtn {
     border: none;
     background-color: transparent;

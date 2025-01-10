@@ -6,10 +6,37 @@ function validateForm() {
     let password = document.querySelector(".pass2").value;
     let confPassword = document.querySelector(".confPass2").value;
 
-    if (password === confPassword) {
-        doPost(username, password);
+    let usernameError = document.querySelector(".nameLabel2 span");
+    let passwordError = document.querySelector(".passLabel2 span");
+    let confPassError = document.querySelector(".confPassLabel span");
+
+    if (username === "") {
+        usernameError.style.display = "inline";
     } else {
-        alert("You typed two different passwords.");
+        usernameError.style.display = "none";
+    }
+    if (password === "") {
+        passwordError.style.display = "inline";
+    } else {
+        passwordError.style.display = "none";
+    }
+    if (confPassword === "") {
+        confPassError.style.display = "inline";
+    } else {
+        confPassError.style.display = "inline";
+    }
+
+    if (!(username === "") && !(password === "") && !(confPassword === "")) {
+        if (password === confPassword) {
+
+            usernameError.style.display = "none";
+            passwordError.style.display = "none";
+            confPassError.style.display = "none";
+
+            doPost(username, password);
+        } else {
+            matchingFailMessage();
+        }
     }
 
 }
