@@ -1,9 +1,0 @@
-1. HTML and CSS - create a menu itself. It contains both login and password. It can adapt to any device. - DONE
-
-1.1. It must have "a new user" button where you text your login, password, confirm password and it stores into database.
-
-2. Link Java to PostgreSQL.
-
-3. Link backend and frontend.
-
-4. Write a program to check database on existence of the provided value. If not, make the red error text appear. If yes, do something that reflects "success".
