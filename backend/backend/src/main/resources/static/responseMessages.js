@@ -9,7 +9,7 @@ function failMessage() {
     showMessage(message);
 }
 
-// Messages for log in page
+// Messages for login page
 function matchingFailMessage() {
     let message = document.getElementById("matchingFailMessage");
     showMessage(message);

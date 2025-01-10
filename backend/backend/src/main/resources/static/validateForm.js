@@ -10,6 +10,7 @@ function validateForm() {
     let passwordError = document.querySelector(".passLabel2 span");
     let confPassError = document.querySelector(".confPassLabel span");
 
+    // Examining if the fields are empty
     if (username === "") {
         usernameError.style.display = "inline";
     } else {
@@ -26,6 +27,8 @@ function validateForm() {
         confPassError.style.display = "none";
     }
 
+    // If the fields are not empty,
+    // Checking for the same value of password and confirmation password
     if (!(username === "") && !(password === "") && !(confPassword === "")) {
         if (password === confPassword) {
             doPost(username, password);
@@ -39,6 +42,7 @@ function validateForm() {
 
 function doPost(username, password) {
 
+    // Inserted user's data
     let data = {
         username: username,
         password: password
@@ -49,7 +53,7 @@ function doPost(username, password) {
     xhr.open("POST", theUrl);
     xhr.setRequestHeader("Content-Type", "application/json");
 
-    // Handle the response
+    // Handling the response
     xhr.onload = () => {
 
         // If success, reload the page and show a success message
@@ -83,7 +87,7 @@ function doGet() {
     xhr.open("GET", theUrl);
     xhr.setRequestHeader("Content-Type", "application/json");
 
-    // Handle the response
+    // Handling the response
     xhr.onload = () => {
 
         // If success, reload the page and show a success message

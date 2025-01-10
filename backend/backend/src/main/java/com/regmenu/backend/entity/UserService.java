@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+// Algorithms for handling received or sent data
 @Service
 public class UserService {
 

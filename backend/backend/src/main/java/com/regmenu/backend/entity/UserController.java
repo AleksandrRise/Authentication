@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// Controller for managing requests between backend and database
 @RestController
 @RequestMapping("/users")
 public class UserController {
